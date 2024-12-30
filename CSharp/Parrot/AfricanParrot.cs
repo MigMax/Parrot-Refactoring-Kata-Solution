@@ -2,7 +2,7 @@
 
 namespace Parrot;
 
-public class AfricanParrot(int numberOfCoconuts, double voltage, bool isNailed) : Parrot(ParrotTypeEnum.AFRICAN, voltage, isNailed)
+public class AfricanParrot(int numberOfCoconuts, double voltage, bool isNailed) : Parrot
 {
     private const double LoadFactor = 9.0;
     

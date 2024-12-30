@@ -2,7 +2,7 @@
 
 namespace Parrot;
 
-public class NorwegianBlueParrot(double voltage, bool isNailed) : Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, voltage, isNailed)
+public class NorwegianBlueParrot(double voltage, bool isNailed) : Parrot
 {
     public override double GetSpeed()
     {
@@ -13,7 +13,7 @@ public class NorwegianBlueParrot(double voltage, bool isNailed) : Parrot(ParrotT
     {
         return Math.Min(24.0, voltage * BaseSpeed);
     }
-    
+
     public override string GetCry()
     {
         return voltage > 0 ? "Bzzzzzz" : "...";
