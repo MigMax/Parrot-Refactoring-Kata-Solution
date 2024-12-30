@@ -2,7 +2,7 @@
 
 namespace Parrot;
 
-public class EuropeanParrot(double voltage, bool isNailed) : Parrot
+public class EuropeanParrot : Parrot
 {
     public override double GetSpeed() => BaseSpeed;
 
