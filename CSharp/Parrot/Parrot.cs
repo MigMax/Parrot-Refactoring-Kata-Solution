@@ -8,7 +8,6 @@ public class Parrot(ParrotTypeEnum type, double voltage, bool isNailed)
     {
         return type switch
         {
-            ParrotTypeEnum.EUROPEAN => BaseSpeed,
             ParrotTypeEnum.NORWEGIAN_BLUE => isNailed ? 0 : GetBaseSpeed(voltage),
             _ => throw new ArgumentOutOfRangeException()
         };
@@ -25,7 +24,6 @@ public class Parrot(ParrotTypeEnum type, double voltage, bool isNailed)
     {
         return type switch
         {
-            ParrotTypeEnum.EUROPEAN => "Sqoork!",
             ParrotTypeEnum.NORWEGIAN_BLUE => voltage > 0 ? "Bzzzzzz" : "...",
             _ => throw new ArgumentOutOfRangeException()
         };

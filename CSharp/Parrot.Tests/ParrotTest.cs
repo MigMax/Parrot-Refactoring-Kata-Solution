@@ -56,14 +56,14 @@ public class ParrotTest
     [Fact]
     public void GetSpeedOfEuropeanParrot()
     {
-        var parrot = new Parrot(ParrotTypeEnum.EUROPEAN, 0, false);
+        var parrot = new EuropeanParrot(0, false);
         Assert.Equal(12.0, parrot.GetSpeed());
     }
 
     [Fact]
     public void GetCryOfEuropeanParrot()
     {
-        var parrot = new Parrot(ParrotTypeEnum.EUROPEAN, 0, false);
+        var parrot = new EuropeanParrot(0, false);
         Assert.Equal("Sqoork!", parrot.GetCry());
     }
 
