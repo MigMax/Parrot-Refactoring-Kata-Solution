@@ -8,27 +8,21 @@ public class Parrot(ParrotTypeEnum type, double voltage, bool isNailed)
     {
         return type switch
         {
-            ParrotTypeEnum.EUROPEAN => GetBaseSpeed(),
+            ParrotTypeEnum.EUROPEAN => BaseSpeed,
             ParrotTypeEnum.NORWEGIAN_BLUE => isNailed ? 0 : GetBaseSpeed(voltage),
             _ => throw new ArgumentOutOfRangeException()
         };
     }
 
-    private double GetBaseSpeed(double voltage)
+    private static double GetBaseSpeed(double voltage)
     {
-        return Math.Min(24.0, voltage * GetBaseSpeed());
+        return Math.Min(24.0, voltage * BaseSpeed);
     }
 
-    protected double GetLoadFactor()
-    {
-        return 9.0;
-    }
+    protected const double LoadFactor = 9.0;
 
-    protected double GetBaseSpeed()
-    {
-        return 12.0;
-    }
-
+    protected const double BaseSpeed = 12.0;
+    
     public virtual string GetCry()
     {
         return type switch

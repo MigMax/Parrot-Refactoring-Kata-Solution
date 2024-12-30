@@ -6,7 +6,7 @@ public class AfricanParrot(int numberOfCoconuts, double voltage, bool isNailed) 
 {
     public override double GetSpeed()
     {
-        return Math.Max(0, GetBaseSpeed() - GetLoadFactor() * numberOfCoconuts);
+        return Math.Max(0, BaseSpeed - LoadFactor * numberOfCoconuts);
     }
     
     public override string GetCry()
