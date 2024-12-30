@@ -9,7 +9,7 @@ public class EuropeanParrot(double voltage, bool isNailed) : Parrot
         return BaseSpeed;
     }
     
-    public override string GetCry()
+    public override string Cry()
     {
         return "Sqoork!";
     }

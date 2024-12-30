@@ -14,7 +14,7 @@ public class NorwegianBlueParrot(double voltage, bool isNailed) : Parrot
         return Math.Min(24.0, voltage * BaseSpeed);
     }
 
-    public override string GetCry()
+    public override string Cry()
     {
         return voltage > 0 ? "Bzzzzzz" : "...";
     }

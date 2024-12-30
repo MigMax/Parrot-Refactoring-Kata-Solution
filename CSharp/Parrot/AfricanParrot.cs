@@ -11,7 +11,7 @@ public class AfricanParrot(int numberOfCoconuts, double voltage, bool isNailed) 
         return Math.Max(0, BaseSpeed - LoadFactor * numberOfCoconuts);
     }
     
-    public override string GetCry()
+    public override string Cry()
     {
         return "Sqaark!";
     }

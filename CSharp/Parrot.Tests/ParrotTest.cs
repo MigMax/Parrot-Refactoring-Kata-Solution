@@ -64,27 +64,27 @@ public class ParrotTest
     public void GetCryOfEuropeanParrot()
     {
         var parrot = new EuropeanParrot(0, false);
-        Assert.Equal("Sqoork!", parrot.GetCry());
+        Assert.Equal("Sqoork!", parrot.Cry());
     }
 
     [Fact]
     public void GetCryOfAfricanParrot()
     {
         var parrot = new AfricanParrot(2, 0, false);
-        Assert.Equal("Sqaark!", parrot.GetCry());
+        Assert.Equal("Sqaark!", parrot.Cry());
     }
 
     [Fact]
     public void GetCryNorwegianBlueParrot_high_voltage()
     {
         var parrot = new NorwegianBlueParrot(4, false);
-        Assert.Equal("Bzzzzzz", parrot.GetCry());
+        Assert.Equal("Bzzzzzz", parrot.Cry());
     }
 
     [Fact]
     public void GetCryNorwegianBlueParrot_no_voltage()
     {
         var parrot = new NorwegianBlueParrot(0, false);
-        Assert.Equal("...", parrot.GetCry());
+        Assert.Equal("...", parrot.Cry());
     }
 }
