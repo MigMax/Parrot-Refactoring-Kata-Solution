@@ -18,9 +18,7 @@ public class Parrot(ParrotTypeEnum type, double voltage, bool isNailed)
     {
         return Math.Min(24.0, voltage * BaseSpeed);
     }
-
-    protected const double LoadFactor = 9.0;
-
+    
     protected const double BaseSpeed = 12.0;
     
     public virtual string GetCry()
@@ -28,7 +26,6 @@ public class Parrot(ParrotTypeEnum type, double voltage, bool isNailed)
         return type switch
         {
             ParrotTypeEnum.EUROPEAN => "Sqoork!",
-            ParrotTypeEnum.AFRICAN => "Sqaark!",
             ParrotTypeEnum.NORWEGIAN_BLUE => voltage > 0 ? "Bzzzzzz" : "...",
             _ => throw new ArgumentOutOfRangeException()
         };
