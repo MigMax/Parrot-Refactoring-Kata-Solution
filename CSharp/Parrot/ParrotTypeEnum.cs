@@ -1,9 +1,8 @@
-﻿namespace Parrot
+﻿namespace Parrot;
+
+public enum ParrotTypeEnum
 {
-    public enum ParrotTypeEnum
-    {
-        EUROPEAN,
-        AFRICAN,
-        NORWEGIAN_BLUE
-    }
+    EUROPEAN,
+    AFRICAN,
+    NORWEGIAN_BLUE
 }
