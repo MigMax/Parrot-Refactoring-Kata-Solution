@@ -6,13 +6,7 @@ public class AfricanParrot(int numberOfCoconuts, double voltage, bool isNailed) 
 {
     private const double LoadFactor = 9.0;
     
-    public override double GetSpeed()
-    {
-        return Math.Max(0, BaseSpeed - LoadFactor * numberOfCoconuts);
-    }
-    
-    public override string Cry()
-    {
-        return "Sqaark!";
-    }
+    public override double GetSpeed() => Math.Max(0, BaseSpeed - LoadFactor * numberOfCoconuts);
+
+    public override string Cry() => "Sqaark!";
 }

@@ -4,18 +4,9 @@ namespace Parrot;
 
 public class NorwegianBlueParrot(double voltage, bool isNailed) : Parrot
 {
-    public override double GetSpeed()
-    {
-        return isNailed ? 0 : GetBaseSpeed();
-    }
+    public override double GetSpeed() => isNailed ? 0 : GetSpeedBasedOnVoltage();
 
-    private double GetBaseSpeed()
-    {
-        return Math.Min(24.0, voltage * BaseSpeed);
-    }
+    private double GetSpeedBasedOnVoltage() => Math.Min(24.0, voltage * BaseSpeed);
 
-    public override string Cry()
-    {
-        return voltage > 0 ? "Bzzzzzz" : "...";
-    }
+    public override string Cry() => voltage > 0 ? "Bzzzzzz" : "...";
 }
